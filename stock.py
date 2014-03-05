@@ -37,7 +37,7 @@ try:
 		dia.quoting = cvs.QOUTE_NONE
 		read = pd.read_csv(input_file, dialect=dia, index_col=['Year', 'Month'], sep = ', ', error_bad_lines=False, chunksize=chunk_size)
 
-		N = len(read.columns) - 1
+		N = len(read.columns) - 2
 
 		max_stock_value = [0*i for i in range(N)]
 		date_max_stock = [0*i for i in range(N)]
